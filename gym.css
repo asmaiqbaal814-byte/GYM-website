@@ -1,0 +1,92 @@
+/* General header background */
+.header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('gym-wallpaper.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+}
+.logo span {
+  color: #00bcd4;
+}
+
+/* Navbar flex */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2.3px;
+  background: #bc1f1f;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Hero (Title section) */
+.hero {
+  margin-top: 100px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero h1 span {
+  color: #00bcd4;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+  color: #e0e0e0;
+}
+.hero button {
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hero button:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
