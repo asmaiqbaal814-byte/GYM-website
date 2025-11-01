@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gym Website</title>
   <link rel="stylesheet" href="GymPackage.css">
+  <link rel="Purchase" href="Purchase.html">
 </head>
 
 <body>
   <header class="header">
+
     <div class="navbar">
       <div class="logo">Fit<span>Zone</span></div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#packages">Packages</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -25,31 +27,34 @@
     <div class="hero">
       <h1>Transform <span>Your Body</span></h1>
       <p>Push harder than yesterday if you want a different tomorrow.</p>
-      <button>Join Now</button>
     </div>
+
   </header>
 
   <main class="main">
     <h2 class="title">Our Gym Packages</h2>
 
     <section id="Packages" class="Packages">
+
       <div class="Package-container">
         <!-- BASIC PACKAGE -->
-        <div class="Package">
-          <h2>Basic Fit</h2>
-          <p class="price">$20 / month</p>
-          <ul>
-            <li>Fully equipment gym</li>
-            <li>Certified trainers</li>
-            <li>Shower & Changing room facilities</li>
-            <li>Free meal plan & workout schedules</li>
-            <li>Body assessment</li>
-          </ul>
-          <button>PURCHASE NOW</button>
-        </div>
+        
+          <div class="Package">
+            <h2>Basic Fit</h2>
+            <p class="price">$20 / month</p>
+            <ul>
+              <li>Fully equipment gym</li>
+              <li>Certified trainers</li>
+              <li>Shower & Changing room facilities</li>
+              <li>Free meal plan & workout schedules</li>
+              <li>Body assessment</li>
+            </ul>
+           <a href="Purchase.html?plan=BasicFit" class="btn">PURCHASE NOW</a>
+          </div>
+        
 
         <!-- POWER PACKAGE -->
-        <div class="Package">
+        <div class="Package ">
           <h2>Power Plus</h2>
           <p class="price">$55 / 3month</p>
           <ul>
@@ -59,12 +64,12 @@
             <li>Yoga + Zumba + CrossFit</li>
             <li>Sauna & recovery lounge</li>
           </ul>
-          <button>PURCHASE NOW</button>
+          <a href="Purchase.html?plan=PowerPlus" class="btn">PURCHASE NOW</a>
         </div>
 
         <!-- ELITE  PACKAGE -->
-        <div class="package">
-          <h3>Elite Pro</h3>
+        <div class="Package ">
+          <h2>Elite Pro</h2>
           <p class="price">$90 / 6 months</p>
           <ul>
             <li>All-access membership (24/7)</li>
@@ -73,11 +78,24 @@
             <li>Personalized nutrition plan</li>
             <li>Sauna, steam, & lounge area</li>
           </ul>
-          <button>PURCHASE NOW</button>
+         <a href="Purchase.html?plan=ElitePro" class="btn">PURCHASE NOW</a>
         </div>
+
       </div>
+
     </section>
   </main>
+
+  <footer class="footer">
+    <p>📞 Contact us: 123-456-7890 | 📧 info@fitzone.com</p>
+    <p>Follow us on
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
+    <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+  </footer>
+
 
 </body>
 
