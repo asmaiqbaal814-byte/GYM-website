@@ -1,0 +1,53 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: black;
+    padding: 15px;
+
+
+}
+nav a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+nav img{
+    margin-right: 60px;
+}
+body{
+    background-image: url(images/image3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+
+}
+.MyDiv{
+    text-align: left;
+}
+.MyDiv p{
+    color: white;
+    font-family: 'Montserrat Extra Bold'sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    right: 20px;
+    left: 20px;
+    
+
+}
+.MyDiv button{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 25px ;
+    border-radius: 18px;
+    height: 1cm;
+    width: 4cm;
+    margin-left: 5cm;
+     
+}
