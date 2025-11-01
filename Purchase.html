@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | FitZone Gym</title>
+    <link rel="stylesheet" href="header.css">
+    <style>
+        /* Hero Section Styles */
+        #package-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+            color: white;
+        }
+
+        #package-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: white;
+            margin-top: 0.2rem;
+        }
+
+        /* Checkout Container Styles */
+        .checkout-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+           
+    
+        }
+
+        .checkout-container h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .checkout-container h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 4px;
+            margin: 14px auto 0;
+            background: var(--primary-red);
+            border-radius: 2px;
+        }
+
+        /* Form Styles */
+        .checkout-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(17, 17, 17, 0.12);
+            padding: 32px;
+            border: 1px solid rgba(17, 17, 17, 0.06);
+            color: var(--dark-bg);
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .checkout-form h3 {
+            color: #e50914;
+            text-align: left;
+            font-size: 1.5rem;
+            margin: 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(229, 9, 20, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .checkout-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+            text-align: left;
+        }
+
+        .checkout-form input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .checkout-form input:focus {
+            border-color: #e50914;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.1);
+        }
+
+        .card-details {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-details .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .btn {
+            background-color: #e50914;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #cc0812;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .checkout-container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .checkout-form {
+                padding: 24px;
+            }
+
+            .checkout-container h2 {
+                font-size: 1.8rem;
+            }
+
+            #package-name,
+            #package-price {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .checkout-container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .checkout-form {
+                padding: 20px;
+            }
+
+            .card-details {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .card-details .form-group {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+
+            .checkout-container h2 {
+                font-size: 1.5rem;
+            }
+
+            .checkout-form h3 {
+                font-size: 1.3rem;
+            }
+
+            #package-name,
+            #package-price {
+                font-size: 1.5rem;
+            }
+
+            .checkout-form input {
+                padding: 10px;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <header class="header">
+
+        <div class="navbar">
+            <div class="logo">Fit<span>Zone</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="hh.html">Home</a></li>
+                    <li><a href="GymPackage.html">Packages</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="hero">
+            <h1>Transform <span>Your Body</span></h1>
+            <div class="package-hero">
+                <h2 id="package-name"></h2>
+                <h2 id="package-price"></h2>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const plan = params.get('plan');
+
+        const packageName = document.getElementById("package-name");
+        const packagePrice = document.getElementById("package-price");
+
+        if (plan === "BasicFit") {
+            packageName.textContent = "Basic Fit";
+            packagePrice.textContent = "$20 / month";
+        } else if (plan === "PowerPlus") {
+            packageName.textContent = "Power Plus";
+            packagePrice.textContent = "$55 / month";
+        } else if (plan === "ElitePro") {
+            packageName.textContent = "Elite Pro";
+            packagePrice.textContent = "$90 / month";
+        } else {
+            packageName.textContent = "No Package Selected";
+            packagePrice.textContent = "Please go back and choose a package";
+        }
+    </script>
+
+
+    <main class="checkout-container">
+        <h2>Checkout</h2>
+
+        <!-- User Info -->
+        <form class="checkout-form" onsubmit="submitForm(event)">
+            <h3>Your Information</h3>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="0xxxxxxxxx" required>
+            </div>
+
+            <h3>Payment Details</h3>
+            <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="1234-5678-9012-3456" required maxlength="19">
+            </div>
+
+            <div class="card-details">
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="datetime" placeholder="MM/YY" required maxlength="5">
+                </div>
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" required maxlength="3">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Complete Purchase</button>
+        </form>
+
+        <script>
+            function submitForm(event) {
+                alert("Successfully Purchased!");
+            }
+        </script>
+    </main>
+
+    <footer class="footer">
+        <p>📞 Contact us: 123-456-7890 | 📧 info@fitzone.com</p>
+        <p>Follow us on
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a>
+        </p>
+        <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
