@@ -8,19 +8,32 @@
     <link rel="stylesheet" href="header.css">
     <style>
         /* Hero Section Styles */
+        .package-hero {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 1rem;
+        }
         #package-name {
-            font-size: 2.2rem;
+            font-size: 1.2rem;
             font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 0.2rem;
+            /* margin-bottom: 0.2rem; */
             color: white;
+            margin: 0 10px 0 0;
+            align-content: center;
+            /* margin-right: 30px ;
+            padding-top: 1px; */
         }
 
         #package-price {
-            font-size: 2.2rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: white;
-            margin-top: 0.2rem;
+            margin: 0 0 0 10px;
+            align-content: center;
+            /* margin-top: 0.2rem;
+            padding-top: 13px; */
         }
 
         /* Checkout Container Styles */
@@ -28,8 +41,8 @@
             width: 90%;
             max-width: 1200px;
             margin: 2rem auto;
-           
-    
+
+
         }
 
         .checkout-container h2 {
@@ -37,7 +50,7 @@
             font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 40px;
-            color: var(--primary-red);
+            color: var(--netflix-red);
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -48,7 +61,7 @@
             width: 90px;
             height: 4px;
             margin: 14px auto 0;
-            background: var(--primary-red);
+            background: var(--netflix-red);
             border-radius: 2px;
         }
 
@@ -66,12 +79,12 @@
         }
 
         .checkout-form h3 {
-            color: #e50914;
+            color: var(--netflix-red);
             text-align: left;
             font-size: 1.5rem;
             margin: 1.5rem 0;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(229, 9, 20, 0.2);
+            border-bottom: 2px solid rgba(var(--netflix-red-rgb), 0.2);
         }
 
         .form-group {
@@ -98,9 +111,9 @@
         }
 
         .checkout-form input:focus {
-            border-color: #e50914;
+            border-color: var(--netflix-red);
             outline: none;
-            box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.1);
+            box-shadow: 0 0 0 2px rgba(var(--netflix-red-rgb), 0.1);
         }
 
         .card-details {
@@ -115,7 +128,7 @@
         }
 
         .btn {
-            background-color: #e50914;
+            background-color: var(--netflix-red);
             color: white;
             padding: 1rem 2rem;
             border: none;
@@ -129,7 +142,7 @@
         }
 
         .btn:hover {
-            background-color: #cc0812;
+            background-color: #B30710;
         }
 
         /* Responsive Styles */
@@ -154,6 +167,7 @@
         }
 
         @media (max-width: 480px) {
+            
             .checkout-container {
                 width: 100%;
                 padding: 10px;
@@ -208,10 +222,11 @@
             <div class="logo">Fit<span>Zone</span></div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="hh.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="GymPackage.html">Packages</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a>
                 </ul>
             </nav>
         </div>
