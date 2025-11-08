@@ -1,19 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
 
-/* ---------- Global ---------- */
-:root {
-  --primary-red: #e50914; /* Bright Energetic Red */
-  --dark-bg: #111111;     /* Rich Charcoal Black */
-  --mid-bg: #1c1c1c;      /* Dark Gray */
-  --light-text: #f5f5f5;  /* Soft White */
-  --muted-text: #cccccc;  /* Grayish White */
-}
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--dark-bg);
-  color: var(--light-text);
+  background-color: #111111; ;
+  color: 		#e50914;
   scroll-behavior: smooth;
 }
 
@@ -42,7 +34,7 @@ body {
   right: 0;
   bottom: 0;
   height: 40px;
-  background: linear-gradient(180deg, rgba(15,15,15,0) 0%, rgba(28,28,28,1) 100%);
+  background: linear-gradient(180deg, rgba(15,15,15,0) 0%, rgb(24, 23, 23) 100%);
   pointer-events: none;
 }
 
@@ -56,7 +48,7 @@ body {
   color: white;
 }
 .logo span {
-  color: var(--primary-red);
+  color: #e50914;
 }
 
 /* Navbar flex */
@@ -71,14 +63,14 @@ body {
   right: 0;
   z-index: 100;       /* ensures it stays above content */
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 /* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 30px
 }
 .nav-links a {
   text-decoration: none;
@@ -87,6 +79,7 @@ body {
   font-size: 1rem;
   position: relative;
   transition: color 0.3s;
+  width: max-content;
 }
 .nav-links a::after {
   content: "";
@@ -95,11 +88,13 @@ body {
   left: 0;
   width: 0%;
   height: 2.3px;
-  background: var(--primary-red);
+  background:#e68734;
   transition: width 0.3s ease;
 }
 .nav-links a:hover::after {
   width: 100%;
+  background: linear-gradient(to right, red,white,black);
+  border-radius:3 ;
 }
 .nav-links a:hover {
   color: var(--primary-red);
@@ -171,6 +166,14 @@ body {
   transition: transform 0.28s ease, box-shadow 0.28s ease;
   border: 1px solid rgba(17,17,17,0.06);
   color: var(--dark-bg); /* dark text on white card */
+  position: relative;
+  overflow: hidden;
+
+}
+
+.Package * {
+  position: relative;
+  z-index: 2; /* ensures text appears above overlay */
 }
 
 
@@ -179,8 +182,32 @@ body {
   transform: translateY(-10px);
   box-shadow: 0 18px 40px rgba(17,17,17,0.18), 0 6px 30px rgba(229,9,20,0.06);
   border-color: rgba(229,9,20,0.12);
-  background-color: #ffffff;
+  
 }
+
+.Package::before {
+  content: "";
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  border-radius: 15px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+}
+
+.Package::before:hover {
+  opacity: 1;
+}
+.package-basic:hover {
+  background-image: url(individual_workouts.jpg);
+  background-size: cover;
+  color: #ffffff; 
+
+}
+
 
 .Package h2 {
   color: var(--dark-bg);
@@ -189,6 +216,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+.Package:hover h2,
+.Package:hover ul li{
+  color:#ffffff;
+} 
 
 .price {
   font-size: 1.4rem;
